@@ -1,38 +1,354 @@
-.App {
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+.textwioiuw {
+  font-family: "Sora", sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --mainDark: #343a40;
+  --mainGrey: rgba(109, 109, 109);
+  --mainLightGrey: rgba(172, 172, 172);
+  --mainWhite: #fff;
+  --mainBlue: #007bff;
+}
+.pwioiuw {
+  font-size: large;
+}
+.Sidebarwioiuw {
+  height: 1000px;
+  width: auto;
+  background-color: #1b2737;
+  z-index: 1;
+  /* position: fixed;  */
+  padding: 0;
+  position: sticky;
+  top: 95px;
+}
+.SideBarListwioiuw {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  padding-left: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.SideBarListwioiuw .rowwioiuw {
+  position: relative;
+  height: 70px;
+  width: auto;
+  padding: 0%;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.SideBarListwioiuw .rowwioiuw:hover {
+  cursor: pointer;
+  background-color: #293846;
+}
+.rowwioiuw #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+.rowwioiuw #title {
+  flex: 70%;
+}
+.SideBarListwioiuw #active {
+  background-color: #243245;
+  border-left: 5px solid #ffffff;
+}
+
+.custemedtext {
+  position: relative;
+  color: #9b9d9e;
+  padding: 0%;
+  margin: 0%;
+}
+.custedmedtext {
+  text-align: center;
+  color: #4d4d4d;
+  padding-top: 5%;
+}
+.customh1 {
+  text-align: left;
+  color: #4d4d4d;
+  padding-top: 5%;
+}
+.custedemdp {
+  text-align: left;
+  color: #4d4d4d;
+  font-size: large;
+}
+
+ul {
+  list-style: none; /* Remove HTML bullets */
+  padding: 0;
+  margin: 0;
+  align-items: inherit;
+}
+
+/* li { 
+    padding-left: 16px; 
+  } */
+
+.customdiv {
+  position: static;
+  bottom: 60px;
+}
+.customhr {
+  position: absolute;
+  left: 10%;
+  width: 85%;
+}
+@media screen and (max-width: 760px) {
+  .customMoblieFix {
+    padding-left: 22px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.UserSideBarwoiuw {
+  height: auto;
+  width: auto;
+  background-color: #f8f8f8;
+  z-index: 1;
+  /* position: fixed;  */
+  padding: 0;
+  position: sticky;
+  top: 95px;
+}
+
+.UserSideBarListwioiuw {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  padding-left: 0%;
+}
+
+.UserSideBarListwioiuw .rowwioiuw {
+  position: relative;
+  height: 60px;
+  width: auto;
+  padding: 0%;
+  list-style-type: none;
+  margin: 0%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  color: #383636;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.UserSideBarListwioiuw .rowwioiuw:hover {
+  cursor: pointer;
+  background-color: #5e9cff;
+}
+
+.UserSideBarListwioiuw #active {
+  background-color: #5e9cff;
+  border-left: 5px solid #00173b;
+}
+.userprofiletext {
+  color: #4d4751;
+}
+
+.fa-trash-alt {
+  color: red;
+}
+/* .mainfooterwioiuw{
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+} */
+.customb {
+  border-radius: 50%;
+}
+.custondropdown {
+  position: relative;
+  right: 50%;
+}
+.homepagecustomh1 {
+  margin: 10px;
+  padding: 40px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #303942;
+}
+
+/* CHatPage */
+
+.messenger {
+  height: calc(100vh-70px);
+  display: flex;
+}
+.chatMenu {
+  flex: 3.5;
+}
+.chatMenuInput {
+  width: 90%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.chatBox {
+  flex: 5.5;
+  border-left: 0.5px solid rgb(197, 197, 197);
+  border-right: 0.5px solid rgb(197, 197, 197);
+}
+.chatBoxBottom {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chatMessageInput {
+  width: 80%;
+  height: 90px;
+  padding: 10px;
+}
+.chatSubmitButton {
+  width: 75px;
+  height: 45px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #212529;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.chatSubmitButton:hover {
+  background-color: #253644;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chatOnline {
+  flex: 3;
+}
+.chatMenuWrapper,
+.chatBoxWrapper,
+.chatOnlineWrapper {
+  padding: 10px;
+  height: 100%;
+}
+.conversation {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-bottom: 0.5px solid rgb(218, 218, 218);
+}
+.conversation:hover {
+  background-color: #424247;
+}
+.conversationimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: flex-end;
+}
+.messageImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.messageTop {
+  display: flex;
+}
+.messageText {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: darkblue;
+  color: white;
+  max-width: 300px;
+}
+.messageBottom {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.message.own {
+  align-items: flex-start;
+}
+.message.own .messageText {
+  background-color: white;
+  color: black;
+}
+.chatBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chatBoxTop {
+  height: 450px;
+  overflow-y: scroll;
+  padding-right: 10px;
+  position: relative;
+}
+.chatOnlineFriend {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.chatOnlineImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid white;
+}
+.chatOnlineImgContainer {
+  position: relative;
+  margin-right: 20px;
+}
+.chatOnlineBadge {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: lightgreen;
+  top: 2px;
+  right: 2px;
+}
+.ChoseUser {
+  position: absolute;
+  font-weight: bold;
+  color: #00173b;
+  align-items: center;
+  font-size: 30px;
+  justify-content: center;
+  top: 120px;
+  right: 24px;
+}
+.chatSubmitButton2 {
+  position: absolute;
+  width: 45%;
+  height: 10%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #212529;
+  color: white;
+  top: 180px;
+  right: 150px;
 }
