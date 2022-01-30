@@ -47,6 +47,7 @@
     "react-multi-select-component": "^4.1.8",
     "react-phone-input-2": "^2.14.0",
     "react-phone-number-input": "^3.1.27",
+    "react-redux": "^7.2.6",
     "react-responsive-carousel": "^3.2.19",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
