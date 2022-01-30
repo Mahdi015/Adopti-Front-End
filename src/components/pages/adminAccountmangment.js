@@ -28,11 +28,11 @@ export const AdminAccountmangment = () => {
   };
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid pt-5">
         <div className="row">
           <Sidedbar user={user} />
 
-          <div className="col-md-6 offset-md-2 pt-5  ">
+          <div className="col-md-6 offset-md-4 pt-5  ">
             <Table className="tbcustom" borderless>
               <thead>
                 <tr>

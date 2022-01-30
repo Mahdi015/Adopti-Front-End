@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { checkConversation } from "../../functions/chat";
-
+import "./Chatpage.css";
 export default function Conversation({
   userChat,
   setcurentConversation,

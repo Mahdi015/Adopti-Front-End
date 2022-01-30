@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Chatpage.css";
 export default function ChatOnline() {
   return (
     <div className="chatOnline">

@@ -114,7 +114,7 @@ export const Profile = () => {
     }
   };
   return (
-    <div className="container-fluid">
+    <div className="container-fluid section-padding">
       <div className="row">
         <div className="col-sm-2 pt-4">
           <Card>

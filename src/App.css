@@ -1,9 +1,19 @@
 /* @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+/* Make Text Unselectable*/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Sora", sans-serif;
 }
@@ -21,15 +31,20 @@
 .pwioiuw {
   font-size: large;
 }
+.mainfooterwioiuw {
+  z-index: 999;
+  position: relative;
+  bottom: 0px;
+}
 .Sidebarwioiuw {
-  height: 1000px;
-  width: auto;
+  height: 1650px;
+  width: 300px;
   background-color: #1b2737;
   z-index: 1;
-  /* position: fixed;  */
+  position: absolute;
   padding: 0;
-  position: sticky;
-  top: 95px;
+  left: 0;
+  top: 85px;
 }
 .SideBarListwioiuw {
   position: relative;
@@ -98,10 +113,6 @@ ul {
   align-items: inherit;
 }
 
-/* li { 
-    padding-left: 16px; 
-  } */
-
 .customdiv {
   position: static;
   bottom: 60px;
@@ -165,12 +176,7 @@ ul {
 .fa-trash-alt {
   color: red;
 }
-/* .mainfooterwioiuw{
-    position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem; 
-} */
+
 .customb {
   border-radius: 50%;
 }
@@ -190,165 +196,290 @@ ul {
 
 /* CHatPage */
 
-.messenger {
-  height: calc(100vh-70px);
-  display: flex;
-}
-.chatMenu {
-  flex: 3.5;
-}
-.chatMenuInput {
-  width: 90%;
-  padding: 10px 0;
-  border: none;
-  border-bottom: 1px solid gray;
-}
-.chatBox {
-  flex: 5.5;
-  border-left: 0.5px solid rgb(197, 197, 197);
-  border-right: 0.5px solid rgb(197, 197, 197);
-}
-.chatBoxBottom {
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.chatMessageInput {
-  width: 80%;
-  height: 90px;
-  padding: 10px;
-}
-.chatSubmitButton {
-  width: 75px;
-  height: 45px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #212529;
-  color: white;
-}
-.chatSubmitButton:hover {
-  background-color: #253644;
-}
-.chatOnline {
-  flex: 3;
-}
-.chatMenuWrapper,
-.chatBoxWrapper,
-.chatOnlineWrapper {
-  padding: 10px;
+/* Find Pet Menu  */
+.findPetMenu {
+  position: relative;
   height: 100%;
+  width: 50%;
+  left: 20%;
+  padding: 0%;
+  margin: 0%;
+  top: -140px;
 }
-.conversation {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 20px;
-  border-bottom: 0.5px solid rgb(218, 218, 218);
-}
-.conversation:hover {
-  background-color: #424247;
-}
-.conversationimg {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-}
-.message {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  align-items: flex-end;
-}
-.messageImg {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 10px;
-}
-.messageTop {
+
+.ul-nav {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  padding-left: 0%;
   display: flex;
 }
-.messageText {
-  padding: 10px;
-  border-radius: 20px;
-  background-color: darkblue;
+.ul-nav .li-nav {
+  padding-left: 10px;
+  padding-right: 35px;
+  position: relative;
+  height: 100px;
+  width: 250px;
+  background-color: #9bcf46;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
   color: white;
-  max-width: 300px;
-}
-.messageBottom {
-  font-size: 12px;
-  margin-top: 10px;
-}
-.message.own {
-  align-items: flex-start;
-}
-.message.own .messageText {
-  background-color: white;
-  color: black;
-}
-.chatBoxWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.chatBoxTop {
-  height: 450px;
-  overflow-y: scroll;
-  padding-right: 10px;
-  position: relative;
-}
-.chatOnlineFriend {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 10px;
-}
-.chatOnlineImg {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid white;
-}
-.chatOnlineImgContainer {
-  position: relative;
-  margin-right: 20px;
-}
-.chatOnlineBadge {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: lightgreen;
-  top: 2px;
-  right: 2px;
-}
-.ChoseUser {
-  position: absolute;
-  font-weight: bold;
-  color: #00173b;
-  align-items: center;
-  font-size: 30px;
   justify-content: center;
-  top: 120px;
-  right: 24px;
+  align-items: center;
+  border-left: 1px solid black;
 }
-.chatSubmitButton2 {
-  position: absolute;
-  width: 45%;
-  height: 10%;
-  border: none;
-  border-radius: 20px;
+
+.ul-nav .li-nav:hover {
   cursor: pointer;
-  background-color: #212529;
+  background-color: #4dcdc4;
+}
+.li-nav #icon {
+  flex: 30%;
+  position: relative;
+  display: grid;
+  margin-right: 15px;
+  margin-left: 0%;
+}
+.li-nav #title {
+  flex: 100%;
+}
+.custominput {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  height: 90px;
+  padding: 0 20px 0 15%;
+  box-sizing: border-box;
+  outline: none;
+}
+.ul-nav .customli-nav {
+  padding-left: 10px;
+  padding-right: 35px;
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-color: #79a334;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
   color: white;
-  top: 180px;
-  right: 150px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px 0 0 10px;
+}
+.ul-nav .customli-nav input::placeholder {
+  color: white;
+}
+/* FindPetDropdown  */
+.carousel-height {
+  height: 400px;
+}
+.FindPetdropdown {
+  width: 200px;
+  margin: 0px auto;
+  position: relative;
+}
+.FindPetdropdown .FindPetdropdown-btn {
+  padding: 10px;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0, 0.6);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.FindPetdropdown .FindPetdropdown-content {
+  position: absolute;
+  top: 160%;
+  right: -35px;
+  /* padding: 15px; */
+  background: #4dcdc4;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0, 0.6);
+  font-weight: 500;
+  width: 250px;
+  height: auto;
+  border-radius: 0 0 10px 10px;
+}
+.FindPetdropdown .FindPetdropdown-content .FindPetdropdown-item {
+  padding: 20px;
+  cursor: pointer;
+  transition: all(1000002s);
+}
+
+.FindPetdropdown .FindPetdropdown-content .FindPetdropdown-item:hover {
+  background-color: #21252956;
+  transition: all(0.2s);
+}
+
+.FindPetdropdown-city {
+  width: 200px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.FindPetdropdown-city .FindPetdropdown-content {
+  position: absolute;
+  top: 5px;
+  right: -36px;
+
+  background: #79a334;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0, 0.6);
+  font-weight: 500;
+  width: 246px;
+  height: auto;
+  border-radius: 8px 0 10px 10px;
+}
+.FindPetdropdown-city .FindPetdropdown-content .FindPetdropdown-item {
+  padding: 20px;
+  cursor: pointer;
+  transition: all(1000002s);
+}
+
+.FindPetdropdown-city .FindPetdropdown-content .FindPetdropdown-item:hover {
+  background: #21252956;
+  transition: all(0.2s);
+}
+
+.petcards-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  transition: all 0.2s ease-in-out;
+}
+.img-cover {
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+  vertical-align: middle;
+  border-style: none;
+  height: 750px;
+  margin-bottom: 4rem;
+}
+.section-padding {
+  padding-top: 5rem;
+}
+
+.img-cover2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.art-img {
+  position: absolute;
+  right: 0;
+  top: 88%;
+}
+.art2-img {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.newstpet-section {
+  background-image: url("./images/bg1.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 276px;
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newstpet-section-img img {
+  width: 160px;
+  height: 180px;
+}
+.newstpet-section h1 {
+  font-size: 55px;
+  margin: 0;
+  color: #9bcf46;
+  margin-right: 28px;
+}
+.newstpet-section-img-cat img {
+  width: 210px;
+  height: auto;
+}
+@media screen and (max-width: 1232px) {
+  .ul-nav {
+    right: 28%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1054px) {
+  .ul-nav {
+    right: 32%;
+  }
+}
+@media screen and (max-width: 986px) {
+  .ul-nav {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 824px) {
+  .ul-nav .li-nav {
+    width: 200px;
+  }
+  .FindPetdropdown .FindPetdropdown-content {
+    width: 200px;
+    right: -29px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .ul-nav .customli-nav {
+    border-radius: 0;
+  }
+  .ul-nav .li-nav {
+    width: 400px;
+  }
+  .ul-nav {
+    right: 5%;
+    width: 400px;
+    flex-direction: column;
+  }
+  .FindPetdropdown .FindPetdropdown-content {
+    width: 400px;
+    right: -35px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .ul-nav .li-nav {
+    width: 290px;
+  }
+  .ul-nav {
+    right: 7%;
+    width: 290px;
+    flex-direction: column;
+  }
+  .FindPetdropdown .FindPetdropdown-content {
+    width: 290px;
+    right: -35px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .ul-nav .li-nav {
+    width: 235px;
+  }
+  .ul-nav {
+    right: 15%;
+    width: 235px;
+    flex-direction: column;
+  }
+  .FindPetdropdown .FindPetdropdown-content {
+    width: 235px;
+    right: -35px;
+  }
 }

@@ -38,6 +38,7 @@ import Intreducemyself from "./components/pages/intreducemyself";
 import Applicationpage from "./components/pages/applicationpage";
 import Adopterprofile from "./components/pages/Adopterprofile";
 import ChatPage from "./components/ChatPage/chatPage";
+import Navbar from "./components/Navbar/Navbar";
 //////////////////////////////////////////////////
 
 function App() {
@@ -73,9 +74,9 @@ function App() {
 
   return (
     <Router>
-      <Navbars />
+      {/* <Navbars /> */}
+      <Navbar />
       <ToastContainer />
-
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/login" component={Login} />

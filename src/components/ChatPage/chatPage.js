@@ -10,6 +10,7 @@ import Conversation from "./Conversation";
 import Message from "./message";
 import { useSelector } from "react-redux";
 import { io } from "socket.io-client";
+import "./Chatpage.css";
 export default function ChatPage() {
   const [users, setusers] = useState([]);
   const socket = useRef();
@@ -93,7 +94,7 @@ export default function ChatPage() {
     });
   }, [messages]);
   return (
-    <div className="messenger">
+    <div className="messenger section-padding">
       <div className="chatMenu">
         <div className="chatMenuWrapper">
           <input type="text" placeholder="Shearch" className="chatMenuInput" />

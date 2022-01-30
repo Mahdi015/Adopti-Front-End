@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactTimeAgo from "react-time-ago";
 import { getSenderImg } from "../../functions/chat";
-
+import "./Chatpage.css";
 export default function Message({ own, curentConversation, m, scrollRef }) {
   const [sender, setsender] = useState([]);
   useEffect(() => {

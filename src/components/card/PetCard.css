@@ -1,0 +1,107 @@
+.petcard {
+  background-size: cover;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  color: #00173b;
+  padding: 10rem 0 0;
+  max-width: 250px;
+  max-height: 300px;
+  min-width: 250px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.petcard:hover,
+.petcard:focus-within {
+  transform: scale(1.05);
+}
+.petcard-content {
+  --padding: 1.5rem;
+  position: relative;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0%/0),
+    hsl(20 0% 0%/0.3) 20%,
+    hsl(0 0% 0%/1)
+  );
+  transform: translateY(-17%);
+}
+
+.petcard-text {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  width: max-content;
+}
+.petcard-text::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background: #82b440;
+  width: calc(100% + var(--padding));
+  left: calc(var(--padding) * -1);
+  bottom: -25%;
+
+  transition: 1s ease;
+  transform-origin: left;
+}
+.petcard:hover .petcard-text::after {
+  transform: scaleX(1);
+}
+.petcard-body {
+  padding: 0;
+  margin: 1rem 0;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  min-height: 40px;
+}
+.petcard-button {
+  display: inline;
+  color: #343a40;
+  background-color: #82b440;
+  padding: 0.5em 1.25em;
+  transition: 0.5s all ease-in-out;
+  border-radius: 0.25em;
+}
+.petcard-button:hover {
+  color: #343a40 !important;
+  background-color: #d1d8df;
+}
+.petcard-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.love-button {
+  font-size: 30px;
+}
+
+@media (hover) {
+  .petcard-content {
+    transform: translateY(40%);
+    transition: 0.6s ease;
+  }
+  .petcard-content > *:not(.petcard-text) {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+  .petcard:hover .petcard-content {
+    transform: translateY(-17%);
+    transition-delay: 0.6s;
+  }
+  .petcard:focus-within .petcard-content {
+    transform: translateY(0%);
+    transition-delay: 0.6s;
+  }
+  .petcard:focus-within .petcard-content {
+    transition-duration: 0ms;
+  }
+  .petcard:hover .petcard-content > *:not(.petcard-text) {
+    opacity: 1;
+    transition-delay: 1s;
+  }
+  .petcard-text::after {
+    transform: scaleX(0);
+  }
+}
