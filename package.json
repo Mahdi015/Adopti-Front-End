@@ -28,6 +28,7 @@
     "clsx": "^1.1.1",
     "firebase": "^8.10.0",
     "javascript-time-ago": "^2.3.10",
+    "jquery": "^3.6.0",
     "jumbotron": "^0.2.9",
     "lodash": "^4.17.21",
     "material-kit-react": "^1.10.0",
