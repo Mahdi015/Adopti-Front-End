@@ -84,6 +84,7 @@ function App() {
         <Route path="/signupcomplete" component={SignUpComplete} />
         <Route path="/forgetpass" component={ForgotPassword} />
         <Route
+          exact
           path="/googleregistercomplete"
           component={googleResterComplete}
         />

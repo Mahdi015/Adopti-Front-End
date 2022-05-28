@@ -24,7 +24,7 @@ export default function ChatPage() {
   const { user } = useSelector((state) => ({ ...state }));
   const scrollRef = useRef();
   useEffect(() => {
-    socket.current = io("ws://localhost:8900");
+    socket.current = io("https://react-node-socket-ap.herokuapp.com");
     socket.current.on("getMessage", (data) => {
       setinstantMessage({
         senderId: data.senderId,
@@ -44,7 +44,7 @@ export default function ChatPage() {
     socket.current.on("getUsers", (users) => {
       console.log(users);
     });
-  }, [user._id]);
+  }, []);
   const loadUsers = () => {
     getAllUSers().then((res) => {
       setusers(res.data);

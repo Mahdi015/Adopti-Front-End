@@ -9,6 +9,7 @@ const Navbar = () => {
   let history = useHistory();
   const [adminVar, setadminVar] = useState(false);
   const [location, setlocation] = useState("");
+  const [userName, setuserName] = useState("");
   const [profileDropdown, setprofileDropdown] = useState(false);
   const { user } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
